@@ -1,0 +1,29 @@
+type Mutation
+{
+postImages(file: S3ObjectInput! ): Photo
+}
+
+type Photo
+{
+id: String!
+timestamp: Int!
+}
+
+type Query
+{
+getImages: [Photo]
+}
+
+input S3ObjectInput
+{
+bucket: String!
+key: String!
+region: String!
+localUri: String
+mimeType: String}
+
+schema 
+{
+query: Query
+mutation: Mutation
+}

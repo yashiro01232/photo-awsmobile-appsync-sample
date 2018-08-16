@@ -1,0 +1,16 @@
+[
+    {
+        "typeName": "Mutation",
+        "fieldName": "postImages",
+        "dataSourceName": "PhotoTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.postImages.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Mutation.postImages.response"
+    },
+    {
+        "typeName": "Query",
+        "fieldName": "getImages",
+        "dataSourceName": "PhotoTable",
+        "requestMappingTemplate": "{managed-by-awsmobile-cli}:Query.getImages.request",
+        "responseMappingTemplate": "{managed-by-awsmobile-cli}:Query.getImages.response"
+    }
+]

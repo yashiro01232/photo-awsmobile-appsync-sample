@@ -1,0 +1,37 @@
+{
+    "dataSources": [
+        {
+            "name": "PhotoTable",
+            "description": null,
+            "type": "AMAZON_DYNAMODB",
+            "serviceRoleArn": "{managed-by-awsmobile-cli}",
+            "dynamodbConfig": {
+                "tableName": "PhotoTable-{suffix}",
+                "awsRegion": "us-east-1",
+                "useCallerCredentials": false
+            }
+        }
+    ],
+    "tables": [
+        {
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "id",
+                    "AttributeType": "S"
+                }
+            ],
+            "TableName": "PhotoTable-{suffix}",
+            "KeySchema": [
+                {
+                    "AttributeName": "id",
+                    "KeyType": "HASH"
+                }
+            ],
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1
+            },
+            "Region": "us-east-1"
+        }
+    ]
+}

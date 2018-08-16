@@ -1,0 +1,13 @@
+{
+    "version" : "2017-02-28",
+    "operation" : "PutItem",
+    ## keyから"public/"を取り除き、idとする。
+    #set( $id = $ctx.args.file.key.substring(7) )
+    "key" : {
+        "id" : { "S" : "${id}" }
+    },
+
+    "attributeValues" : {
+      "timestamp": { "N" : ${util.time.nowEpochSeconds()} }
+    }
+}
